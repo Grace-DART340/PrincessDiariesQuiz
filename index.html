@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pesonality Quiz</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    
+    <body>
+        <div id="intro">
+            <h1>Which <em>Princess Diaries</em> character are you?</h1>
+            <p>The Princess Diaries is one of the most iconic coming-of-age films from the early 2000s. From the outfits to the dialogue the film has many memorable moments. Let's find out which character you are! </p>
+        </div>
+        
+        <div id="container">
+                <h2 id="question">1. Pick a color</h2>
+            <div id="buttons">
+                <button id="resultA" type="image"><img id="img1" src="PrincessDiariesPics/blue.pt2.jpeg" height="250px" width="250px" alt="blue"></button>
+                <button id="resultB"><img id="img2" src="PrincessDiariesPics/gold.jpeg" height="250px" width="250px" alt="gold"></button>
+                <button id="resultC"><img id="img3" src="PrincessDiariesPics/lilac.png" height="250px" width="250px" alt="lilac"></button>
+                <button id="resultD"><img id="img4" src="PrincessDiariesPics/black.jpeg" height="250px" width="250px" alt="black"></button>
+                <button id="resultE"><img id="img5" src="PrincessDiariesPics/pink.jpeg" height="250px" width="250px" alt="pink"></button>
+                <button id="resultF"><img id="img6" src="PrincessDiariesPics/white.webp" height="250px" width="250px" alt="white"></button>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        
+        <script>
+            
+            let number = 0;
+                $("#img1").on("click", function(){
+                    number += 1
+                });
+                $("#img2").on("click", function(){
+                    number += 2
+                });
+                $("#img3").on("click", function(){
+                    number += 3
+                });
+                $("#img4").on("click", function(){
+                    number += 4
+                });
+                $("#img5").on("click", function(){
+                    number += 5
+                });
+                $("#img6").on("click", function(){
+                    number += 6
+                });
+            
+            
+            
+            let question2 = function() {
+                $("#question").text("2. Pick a dream vacation location:");
+                $("#img1").attr("src", "PrincessDiariesPics/Genovia.png"); 
+                $("#img2").attr("src", "PrincessDiariesPics/England.png"); 
+                $("#img3").attr("src", "PrincessDiariesPics/tokyo.png"); 
+                $("#img4").attr("src", "PrincessDiariesPics/australia.png"); 
+                $("#img5").attr("src", "PrincessDiariesPics/cabo.png");
+                $("#img6").attr("src", "PrincessDiariesPics/greece.png");
+                $("button").on("click", question3);
+            }
+            
+            let question3 = function() {
+                $("#question").text("3. Choose an iconic Princess Diaries quote:");
+                $("#img1").attr("src", "QuizText/shut-up.png"); 
+                $("#img2").attr("src", "QuizText/late.png"); 
+                $("#img3").attr("src", "QuizText/wait.png"); 
+                $("#img4").attr("src", "QuizText/consent.png"); 
+                $("#img5").attr("src", "QuizText/Gupta.png");
+                $("#img6").attr("src", "QuizText/eagle.png");
+                $("button").on("click", question4);
+            }
+            
+            let question4 = function() {
+                $("#question").text("4. Pick an aesthetic:");
+                $("#img1").attr("src", "PrincessDiariesPics/Light-Academia.webp"); 
+                $("#img2").attr("src", "PrincessDiariesPics/dark-academia.webp"); 
+                $("#img3").attr("src", "PrincessDiariesPics/grunge-aesthetic.jpeg"); 
+                $("#img4").attr("src", "PrincessDiariesPics/old-money.jpeg"); 
+                $("#img5").attr("src", "PrincessDiariesPics/y2k-aesthetic.webp");
+                $("#img6").attr("src", "PrincessDiariesPics/minimal.jpeg");
+                $("button").on("click", question5);
+            }
+            
+            let question5 = function() {
+                $("#question").text("5. Pick a Mia mood:");
+                $("#img1").attr("src", "PrincessDiariesPics/stress-Mia.png"); 
+                $("#img2").attr("src", "PrincessDiariesPics/dancing.jpeg"); 
+                $("#img3").attr("src", "PrincessDiariesPics/disgusted-Mia.jpg"); 
+                $("#img4").attr("src", "PrincessDiariesPics/ice-cream-Mia.jpg"); 
+                $("#img5").attr("src", "PrincessDiariesPics/spa-Mia.jpg");
+                $("#img6").attr("src", "PrincessDiariesPics/concerned-Mia.jpg");
+                $("button").on("click", question6);
+            }
+            
+            let question6 = function() {
+                $("#question").text("6. Choose another quote:");
+                $("#img1").attr("src", "PrincessDiariesPics/tenth-grade.png"); 
+                $("#img2").attr("src", "PrincessDiariesPics/spain.png"); 
+                $("#img3").attr("src", "PrincessDiariesPics/moose.png"); 
+                $("#img4").attr("src", "PrincessDiariesPics/courage.png"); 
+                $("#img5").attr("src", "PrincessDiariesPics/dry-cleaning.png");
+                $("#img6").attr("src", "PrincessDiariesPics/grass.png");
+                $("button").on("click", question7);
+            }
+            
+            let question7 = function() {
+                $("#question").text("7. Your friends would call you:");
+                $("#img1").attr("src", "PrincessDiariesPics/clumsy.png"); 
+                $("#img2").attr("src", "PrincessDiariesPics/composed.png"); 
+                $("#img3").attr("src", "PrincessDiariesPics/funny.png"); 
+                $("#img4").attr("src", "PrincessDiariesPics/protective.png"); 
+                $("#img5").attr("src", "PrincessDiariesPics/popular.png");
+                $("#img6").attr("src", "PrincessDiariesPics/organized.png");
+                $("button").on("click", question8);
+            }
+            
+            let question8 = function() {
+                $("#question").text("8. Pick a 2000s fashion piece:");
+                $("#img1").attr("src", "PrincessDiariesPics/bucket-hat-scene.jpeg"); 
+                $("#img2").attr("src", "PrincessDiariesPics/skirt.jpeg"); 
+                $("#img3").attr("src", "PrincessDiariesPics/baby-tees.jpeg"); 
+                $("#img4").attr("src", "PrincessDiariesPics/tracksuit.webp"); 
+                $("#img5").attr("src", "PrincessDiariesPics/colorful-butterfly-clips.jpeg");
+                $("#img6").attr("src", "PrincessDiariesPics/green-baguette-bag.webp");
+                $("button").on("click", question9);
+            }
+            
+            let question9 = function() {
+                $("#question").text("9. Pick a song from the soundtrack:");
+                $("#img1").attr("src", "PrincessDiariesPics/breakaway.png"); 
+                $("#img2").attr("src", "PrincessDiariesPics/crowning-glory.png"); 
+                $("#img3").attr("src", "PrincessDiariesPics/falling-star.png"); 
+                $("#img4").attr("src", "PrincessDiariesPics/miracles-happen.png"); 
+                $("#img5").attr("src", "PrincessDiariesPics/cupid.png");
+                $("#img6").attr("src", "PrincessDiariesPics/national-anthem.png");
+                $("button").on("click", question10);
+            }
+            
+            let question10 = function() {
+                $("#question").text("10. Pick your favorite outfit from the movie:");
+                $("#img1").attr("src", "PrincessDiariesPics/princess.jpeg"); 
+                $("#img2").attr("src", "PrincessDiariesPics/regal-dress.jpeg"); 
+                $("#img3").attr("src", "PrincessDiariesPics/uniform.jpeg"); 
+                $("#img4").attr("src", "PrincessDiariesPics/red-dress.jpeg"); 
+                $("#img5").attr("src", "PrincessDiariesPics/pink-loathe.jpeg");
+                $("#img6").attr("src", "PrincessDiariesPics/pink-outfit.jpeg");
+                $("button").on("click", results);
+            }
+            
+            let results = function() {
+                $("#question").empty();
+                $("#buttons").empty();
+            
+                
+                if (number <= 10){
+                    $("#question")
+                        .append("Mia Thermopolis")
+                        .addClass("questionresults");
+                    $("<img>")
+                        .attr ("src", "PrincessDiariesPics/Mia.jpeg")
+                        .width("250px")
+                        .appendTo("#buttons")
+                        .addClass("imgresults");
+                    $("<p>")
+                        .addClass("results")
+                        .appendTo("#buttons")
+                        .append("You are Mia! You've got main character energy. That energy may lead to some awkward situations but you always stay true to yourself and do what's right in the end.")
+                } else if (number <=20) {
+                    $("#question")
+                        .append("Queen Clarisse")
+                        .addClass("questionresults");
+                    $("<img>")
+                        .attr ("src", "PrincessDiariesPics/queen.jpeg")
+                        .width("250px")
+                        .appendTo("#buttons")
+                        .addClass("imgresults");
+                    $("<p>")
+                        .addClass("results")
+                        .appendTo("#buttons")
+                        .append("You are Queen Clarisse! You embody elegance and grace. Many people admire you, not only for the way you carry yourself, but for the way you treat others as well. You truly have a kind and royal heart.")
+                } else if (number <=30) {
+                    $("#question")
+                        .append("Lilly Moscovitz")
+                        .addClass("questionresults");
+                    $("<img>")
+                        .attr ("src", "PrincessDiariesPics/lilly.jpeg")
+                        .width("250px")
+                        .appendTo("#buttons")
+                        .addClass("imgresults");
+                    $("<p>")
+                        .addClass("results")
+                        .appendTo("#buttons")
+                        .append("You are Lilly! You are definietly the rebel one of the group. You bring such an infectious energy to any situtation which might cause some uwanted attention, but you never back down.")
+                } else if (number <=40) {
+                    $("#question")
+                        .append("Joe")
+                        .addClass("questionresults");
+                    $("<img>")
+                        .attr ("src", "PrincessDiariesPics/Joe.webp")
+                        .width("250px")
+                        .appendTo("#buttons")
+                        .addClass("imgresults");
+                    $("<p>")
+                        .addClass("results")
+                        .appendTo("#buttons")
+                        .append("You are Joe! The most loyal and vigilant friend. You are the first one to rush to a friend whenever they need help. People know they can always count on you!")
+                } else if (number <=50) {
+                    $("#question")
+                        .append("Lana Thomas")
+                        .addClass("questionresults");
+                    $("<img>")
+                        .attr ("src", "PrincessDiariesPics/Lana-Thomas.webp")
+                        .width("250px")
+                        .appendTo("#buttons")
+                        .addClass("imgresults");
+                    $("<p>")
+                        .addClass("results")
+                        .appendTo("#buttons")
+                        .append("You are Lana! You were definitely the mean girl in high school. Sorry, not sorry! You care a lot about what people think about you so you always stay up to date on the latest fashion trends. You're also a shopaholic and love going to the beach (to tan of course)!")
+                } else if (number <=60) {
+                    $("#question")
+                        .append("Charlotte Kutaway")
+                        .addClass("questionresults");
+                    $("<img>")
+                        .attr ("src", "PrincessDiariesPics/charlotte.jpeg")
+                        .width("250px")
+                        .appendTo("#buttons")
+                        .addClass("imgresults");
+                    $("<p>")
+                        .addClass("results")
+                        .appendTo("#buttons")
+                        .append("You are Charlotte! You are definitely a planner. You wouldn't be caught red-handed without a schedule, notebook, and your corresponding color-coding pens. You are the first one to arrive at any event, just to make sure everything is as it should be. Your friends love you for your keen and observant eye!")
+                } 
+            }
+            
+            
+            
+            $("button").on("click", question2);
+            
+        
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+
+
+</html>
